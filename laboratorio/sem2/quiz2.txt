@@ -1,0 +1,5 @@
+Explique cuales son los modos de programacion en Python?
+
+- Modo Interectivo: en este modo el interprete analiza linea por linea las lineas de comando y te indica el error en el momento
+
+- Modo Normal: en este modo los comando se escriben en un block de nota y luego el interprete analiza el block de nota
