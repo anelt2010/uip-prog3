@@ -1,0 +1,58 @@
+#!/usr/bin/python
+# -*- coding: 850 -*-
+ScreenManager:
+    palabra: "" +my_textinput.text
+    Screen:
+        name: 'menu'
+        canvas:
+            Color:
+                rgba: 11/255., 188/255., 197/255., 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text:
+                (U'[b]Nombre [/b]')
+            markup: True
+            font_size: 30      
+            size_hint:(None, None)
+            size:(300, 30)
+            pos_hint:{'center_x': .3 , 'center_y': .8}
+
+	    TextInput:
+		    id: my_textinput
+		    font_name: 'britanic.ttf'
+		    size_hint:(None, None)
+		    size: (300, 30)
+            pos_hint:{'center_x': .6,'center_y': .8}
+		
+        Button:
+            text: 'SIGUIENTE'
+            size_hint:(None, None)
+            size:(250, 50)
+            pos_hint:{'center_x': .5,'center_y': .20}
+            on_press: 
+                root.current = 'resultado'
+
+    Screen:
+        name: 'resultado'    
+	    canvas:
+            Color:
+                rgba: 11/255., 188/255., 197/255., 1
+            Rectangle:
+                pos: self.pos
+                size: self.size
+        Label:
+            text: 'Hola '+root.palabra
+            font_size: 50      
+            size_hint:(None, None)
+            size:(300, 50)
+            pos_hint:{'center_x': .5 , 'center_y': .7}        
+
+	    Button:
+            text: 'VOLVER'
+            size_hint:(None, None)
+            size:(250, 50)
+            pos_hint:{'center_x': .5,'center_y': .20}
+            on_press: 
+                root.current = 'menu'
